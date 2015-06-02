@@ -1,8 +1,8 @@
 /* 
 * @Author: nimi
 * @Date:   2015-05-21 16:08:02
-* @Last Modified by:   nimi
-* @Last Modified time: 2015-06-01 10:54:39
+* @Last Modified by:   Mark Bennett
+* @Last Modified time: 2015-06-02 15:16:40
 */
 
 'use strict';
@@ -41,7 +41,12 @@ var Login = React.createClass({
     });
   },
 
-
+  componentWillMount: function() {
+    // if (window.localStorage.getItem('io.codergirl')) {
+    //   this.transitionTo('/');
+    // }
+  },
+  
   componentDidMount: function() {
 
     AuthStore.addChangeListener(this._onChange);
@@ -54,11 +59,6 @@ var Login = React.createClass({
 
 
   render: function() {
-
-    if (window.localStorage.getItem('io.codergirl')) {
-      this.transitionTo('/');
-    }
-
     return (
 
       <div className="grid-block login">
