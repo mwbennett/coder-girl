@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "test": "jest"
+    "test": ["jest", "jasmine"]
   },
   "jest": {
     "rootDir": "./public/js/components",
@@ -19,6 +19,7 @@
     ],
     "testDirectoryName": "tests"
   },
+  "jasmine": "./node_modules/.bin/jasmine-node spec",
   "browserify": {
     "transform": [
       "reactify"
